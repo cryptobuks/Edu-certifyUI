@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	    <title>EDU-CERTIFY</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="css.css">
+		
+</head>
+
+<body bgcolor="#1A2223">
+
+	
+<!-- Start Formoid form-->
+<link rel="stylesheet" href="checkout_data/formoid-biz-red.css" type="text/css">
+<script type="text/javascript" src="checkout_data/jquery.js"></script>
+
+<form enctype="multipart/form-data" class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post" novalidate="novalidate"><div class="title"><h2>Create Certifier</h2></div>
+	
+		
+	<div class="element-input"><label class="title"></label><input class="large" name="oname" id="oname" placeholder="Organisation Name" type="text"></div>
+	<div class="element-input"><label class="title"></label><input class="large" name="uid" id="uid" placeholder="Unique ID" type="text"></div>
+	<div class="element-input"><label class="title"></label><input class="large" name="pubkey" id="pubkey" placeholder="Public Key" type="text"></div>
+	<div class="element-email"><label class="title"></label><input class="large" name="email" id="email" placeholder="Email" type="text"></div>
+	<div class="element-input"><label class="title"></label><input class="large" name="fname" id="fname" placeholder="First Name" type="text"></div>
+	<div class="element-input"><label class="title"></label><input class="large" name="lname" id="lname" placeholder="Last Name" type="text"></div>
+        <div class="element-input"><label class="title"></label><input class="large" name="ph" id="ph" placeholder="Phone" type="text"></div>
+        
+<div class="submit"><input value="Create Certifier" type="submit" onClick="certifier_post()"></div>
+</form>
+
+<form enctype="multipart/form-data" class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post" novalidate="novalidate"><div class="title"><h2>Create Student</h2></div>
+	
+		
+	<div class="element-input"><label class="title"></label><input class="large" name="uid" id="uid1" placeholder="Unique ID" type="text"></div>
+	<div class="element-input"><label class="title"></label><input class="large" name="pubkey" id="pubkey1" placeholder="Public Key" type="text"></div>
+	<div class="element-email"><label class="title"></label><input class="large" name="email" id="email1" placeholder="Email" type="text"></div>
+	<div class="element-input"><label class="title"></label><input class="large" name="fname" id="fname1" placeholder="First Name" type="text"></div>
+	<div class="element-input"><label class="title"></label><input class="large" name="lname" id="lname1" placeholder="Last Name" type="text"></div>
+        <div class="element-input"><label class="title"></label><input class="large" name="ph" id="ph1" placeholder="Phone" type="text"></div>
+        
+<div class="submit"><input value="Create Student" type="submit" onClick="subject_post()"></div>
+</form>
+<form enctype="multipart/form-data" class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post" novalidate="novalidate"><div class="title"><h2>Create Certificate</h2></div>
+	
+		
+	<div class="element-input"><label class="title"></label><input class="large" name="uid" id="uid11" placeholder="Certificate ID" type="text"></div>
+        <div class="element-input"><label class="title"></label><input class="large" name="pubkey11" id="pubkey11" placeholder="Student Public Key" type="text"></div>
+        <div class="element-input"><label class="title"></label><input class="large" name="pubkey" id="pubkey12" placeholder="Certifier Public Key" type="text"></div>
+	<div class="element-input"><label class="title"></label><input class="large" name="fname" id="fname11" placeholder="Certificate Type" type="text"></div>
+
+<div class="submit"><input value="Create Certificate" type="submit" onClick="sva_post()"></div>
+</form>
+
+
+<form enctype="multipart/form-data" class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" method="post" novalidate="novalidate"><div class="title"><h2>Submit Transaction</h2></div>
+	
+		
+	<div class="element-input"><label class="title"></label><input class="large" name="uid" id="uid111" placeholder="Certificate ID" type="text"></div>
+        
+
+        
+<div class="submit"><input value="Submit Transaction" type="submit" onClick="tran_post()"></div>
+</form>
+
+<div class="formoid-biz-red" style="background-color:#1A2223;font-size:14px;font-family:'Open Sans','Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;color:#ECECEC;max-width:480px;min-width:150px" >
+   <div class="title">
+           <h2>
+                CERTIFICATE VERIFICATION
+           </h2>
+        </div>             
+<div class="submit"><input value="Verify Certificate" type="submit" onClick="verify()"></div>
+<div class="title"><h2 id = "v1"> </h2></div>
+</div>
+
+<p id = "v1"></p>
+
+
+<script type="text/javascript" src="checkout_data/formoid-biz-red.js"></script>
+<script type="text/javascript" src ="node-modules/require.js"></script>
+<script src="node-modules/xmlhttprequest/XMLHttpRequest.js"></script>
+<script type="text/javascript" src ="index.js">
+</script>
+</body>
+</html>
